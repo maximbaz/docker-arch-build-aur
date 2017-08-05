@@ -6,8 +6,19 @@ The following command will download AUR package and build it:
 
 ```
 $ docker pull maximbaz/arch-build-aur
-$ docker run --rm -v $(pwd):/pkg maximbaz/arch-build-aur /bin/bash -c '/build.sh <package>'
+$ docker run --rm -v $(pwd):/pkg maximbaz/arch-build-aur /bin/bash -c '/build-aur <package>'
 ```
+
+### Build PKGBUILD
+
+The following command will build local PKGBUILD file:
+
+```
+$ docker pull maximbaz/arch-build-aur
+$ docker run --rm -v $(pwd):/pkg -v $(pwd):/build maximbaz/arch-build-aur /bin/bash -c '/build-pkgbuild'
+```
+
+### Compiled package location
 
 The binary will be placed in the /pkg folder, which in the example above is mounted to the current directory on the host.
 
