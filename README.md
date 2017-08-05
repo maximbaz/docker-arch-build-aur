@@ -11,7 +11,7 @@ $ docker run --rm -v $(pwd):/pkg maximbaz/arch-build-aur /bin/bash -c '/build-au
 
 ### Build PKGBUILD
 
-The following command will build local PKGBUILD file:
+The following command will build local PKGBUILD file (must reside in a folder mounted to /build):
 
 ```
 $ docker pull maximbaz/arch-build-aur
