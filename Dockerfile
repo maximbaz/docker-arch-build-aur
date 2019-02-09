@@ -1,4 +1,4 @@
-FROM base/devel:latest
+FROM archlinux/base:latest
 
 RUN pacman -Sy --noconfirm git
 
