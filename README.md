@@ -24,6 +24,6 @@ The binary will be placed in the /pkg folder, which in the example above is moun
 
 ---------
 
-* Based on [base/devel](https://hub.docker.com/r/base/devel/) image.
+* Based on [archlinux/base](https://hub.docker.com/r/archlinux/base) image.
 * Updated daily with [Travis cron job](https://travis-ci.org/maximbaz/docker-arch-build-aur).
 * Sources are on [Github](https://github.com/maximbaz/docker-arch-build-aur).
