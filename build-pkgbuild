@@ -10,7 +10,6 @@ fi
 cd /build
 chown -R makepkg:users /build
 
-pacman -Sy && pacman -S base-devel sudo --noconfirm
 sudo -u makepkg makepkg --noconfirm -sf
 
 mv $package*.pkg.tar.xz /pkg
