@@ -1,6 +1,6 @@
 FROM archlinux/base:latest
 
-RUN pacman -Sy --noconfirm base-devel git
+RUN pacman -Syu --noconfirm --needed base-devel git
 
 VOLUME /pkg /build
 
