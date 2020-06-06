@@ -9,6 +9,15 @@ $ docker pull maximbaz/arch-build-aur
 $ docker run --rm -v $(pwd):/pkg maximbaz/arch-build-aur /bin/bash -c '/build-aur <package>'
 ```
 
+### Build repo packages
+
+The following command will download repo package and build it:
+
+```
+$ docker pull maximbaz/arch-build-aur
+$ docker run --rm -v $(pwd):/pkg maximbaz/arch-build-aur /bin/bash -c '/build-repo <package>'
+```
+
 ### Build PKGBUILD
 
 The following command will build local PKGBUILD file (must reside in a folder mounted to /build):
