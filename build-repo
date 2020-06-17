@@ -11,6 +11,15 @@ package=$1
 
 chown -R makepkg:users /build
 
-cd /tmp && sudo -u makepkg asp checkout $package && mv $package/trunk/* /build && cd /
+cd /tmp
+sudo -u makepkg asp checkout "$package"
+mv "$package"/repos/{core,extra,community}-{any,x86_64}/* /build 2>/dev/null || true
+cd /
 
-/build-pkgbuild
+if [ -f /build/PKGBUILD ]
+then
+	/build-pkgbuild
+else
+	echo "Unsupported package: error in choosing repository or architecture."
+	exit 1
+fi
