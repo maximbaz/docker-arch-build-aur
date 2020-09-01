@@ -13,4 +13,4 @@ chown -R makepkg:users /build
 pacman -Syu --noconfirm
 sudo -u makepkg makepkg --noconfirm -sf
 
-mv $package*.pkg.tar.xz /pkg
+mv $package*.pkg.tar.* /pkg
