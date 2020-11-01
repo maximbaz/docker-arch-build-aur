@@ -1,4 +1,4 @@
-FROM archlinux/base:latest
+FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm --needed base base-devel git asp && \
     useradd -d /home/makepkg makepkg && \
