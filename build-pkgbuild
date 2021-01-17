@@ -12,5 +12,6 @@ chown -R makepkg:users /build
 
 pacman -Syu --noconfirm
 sudo -u makepkg makepkg --noconfirm -sf
+sudo -u makepkg makepkg --printsrcinfo > .SRCINFO
 
 mv /home/makepkg/out/* /pkg

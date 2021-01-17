@@ -27,6 +27,8 @@ $ docker pull maximbaz/arch-build-aur
 $ docker run --rm -v $(pwd):/pkg -v $(pwd):/build maximbaz/arch-build-aur /bin/bash -c '/build-pkgbuild'
 ```
 
+`.SRCINFO` file will be updated/created in /build directory.
+
 ### Compiled package location
 
 The binary will be placed in the /pkg folder, which in the example above is mounted to the current directory on the host.
