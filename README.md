@@ -31,6 +31,16 @@ $ docker run --rm -v $(pwd):/pkg -v $(pwd):/build maximbaz/arch-build-aur /bin/b
 
 The binary will be placed in the /pkg folder, which in the example above is mounted to the current directory on the host.
 
+### Troubleshooting
+
+While running the image you get the following error:
+
+```
+chown: cannot read directory '/build': Permission denied
+```
+
+try to add the `:z` option to the volume mounts, like: `-v $(pwd):/pkg:z -v $(pwd):/build:z`.
+
 ---------
 
 * Based on [archlinux/base](https://hub.docker.com/r/archlinux/base) image.
