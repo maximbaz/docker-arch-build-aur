@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/maximbaz/docker-arch-build-aur.svg?branch=master)](https://travis-ci.org/maximbaz/docker-arch-build-aur)
+[![CI](https://github.com/maximbaz/docker-arch-build-aur/actions/workflows/ci.yml/badge.svg)](https://github.com/maximbaz/docker-arch-build-aur/actions/workflows/ci.yml)
 
 ### Build AUR packages
 
@@ -33,8 +33,8 @@ $ docker run --rm -v $(pwd):/pkg -v $(pwd):/build maximbaz/arch-build-aur /bin/b
 
 The binary will be placed in the /pkg folder, which in the example above is mounted to the current directory on the host.
 
----------
+---
 
-* Based on [archlinux/base](https://hub.docker.com/r/archlinux/base) image.
-* Updated daily with [Travis cron job](https://travis-ci.org/maximbaz/docker-arch-build-aur).
-* Sources are on [Github](https://github.com/maximbaz/docker-arch-build-aur).
+- Based on [archlinux/base](https://hub.docker.com/r/archlinux/base) image.
+- Updated daily with [GitHub actions](https://github.com/maximbaz/docker-arch-build-aur/actions).
+- Sources are on [Github](https://github.com/maximbaz/docker-arch-build-aur).

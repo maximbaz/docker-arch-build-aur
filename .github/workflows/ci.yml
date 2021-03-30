@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and push container image
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+        run: |
+          docker pull archlinux/base:latest
+          docker build . -t $DOCKER_USER/arch-build-aur
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker push $DOCKER_USER/arch-build-aur
