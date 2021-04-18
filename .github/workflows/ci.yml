@@ -18,7 +18,7 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
         run: |
-          docker pull archlinux/base:latest
+          docker pull archlinux:latest
           docker build . -t $DOCKER_USER/arch-build-aur
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push $DOCKER_USER/arch-build-aur
