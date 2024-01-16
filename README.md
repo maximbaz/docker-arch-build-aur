@@ -1,3 +1,11 @@
+# No longer maintained
+
+Use [valdar/docker-arch-build-aur](https://github.com/valdar/docker-arch-build-aur) instead.
+
+It's pushing images to both [quay.io](https://quay.io/repository/valdar/arch-build-aur) and [hub.docker.com](https://hub.docker.com/r/valdar/arch-build-aur).
+
+---------------------------
+
 [![CI](https://github.com/maximbaz/docker-arch-build-aur/actions/workflows/ci.yml/badge.svg)](https://github.com/maximbaz/docker-arch-build-aur/actions/workflows/ci.yml)
 
 ### Build AUR packages
